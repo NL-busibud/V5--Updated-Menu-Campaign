@@ -1,0 +1,35 @@
+.right-main-content {
+  position: relative;
+
+  width: calc(100% - 50px);
+  height: 91vh;
+  margin: 0 25px;
+  background: #fff;
+  border-radius: 9px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+  min-width: 0;
+  padding: 0px 12px;
+}
+
+.right-main-content {
+  position: relative;
+}
+
+.content-loader {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-loader img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}

@@ -1,0 +1,359 @@
+.main-content-data {
+  width: calc(100% - 16px);
+  height: min(510px, calc(100% - 73px));
+  margin: 0 8px 8px;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-sizing: border-box;
+  border: 1px solid #dfe3e8;
+  border-radius: 28px;
+  background: #ffffff;
+}
+
+.table-scroll-area {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  overflow: auto;
+  background: #ffffff;
+  scrollbar-width: thin;
+  scrollbar-color: #ff7b98 #f5f5f5;
+}
+
+.table-scroll-area::-webkit-scrollbar {
+  width: 8px;
+  height: 7px;
+}
+
+.table-scroll-area::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
+
+.table-scroll-area::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: #ff7b98;
+}
+
+.table-scroll-area::-webkit-scrollbar-thumb:hover {
+  background: #ff6687;
+}
+
+.degree-label {
+  position: absolute;
+  top: 6px;
+  left: 10px;
+  z-index: 6;
+  padding: 3px 7px;
+  border-radius: 4px;
+  background: #171717;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 14px;
+  pointer-events: none;
+}
+
+.data-table {
+  width: max-content;
+  min-width: 100%;
+  border-spacing: 0;
+  border-collapse: separate;
+  table-layout: fixed;
+  color: #222222;
+  font-size: 15px;
+}
+
+.data-table .checkbox-column {
+  width: 45px;
+  min-width: 45px;
+  max-width: 45px;
+  text-align: center;
+}
+
+.data-table .number-column {
+  width: 55px;
+  min-width: 55px;
+  max-width: 55px;
+  text-align: center;
+}
+
+.data-table .data-column,
+.data-table th:not(.checkbox-column):not(.number-column),
+.data-table td:not(.checkbox-column):not(.number-column) {
+  width: var(--column-width, 180px);
+  min-width: var(--column-width, 180px);
+  max-width: var(--column-width, 180px);
+}
+
+.data-table thead th {
+  height: 60px;
+  padding: 6px 10px;
+  box-sizing: border-box;
+  border-right: 1px solid #d0d8e6;
+  border-bottom: 1px solid #cfd7e4;
+  background: #dce8ff;
+  color: #171717;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: left;
+  vertical-align: middle;
+  overflow-wrap: anywhere;
+}
+
+.data-table thead th:first-child {
+  border-left: 1px solid #d0d8e6;
+}
+
+.data-table tbody td {
+  height: 38px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  border-right: 1px solid #e0e2e6;
+  border-bottom: 1px solid #e0e2e6;
+  background: #ffffff;
+  color: #2a2a2a;
+  line-height: 18px;
+  vertical-align: middle;
+}
+
+.data-table tbody td:first-child {
+  border-left: 1px solid #e0e2e6;
+}
+
+.data-table tbody tr:hover td {
+  background: #f8fbff;
+}
+
+.data-cell {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.data-table input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+  margin: 0;
+  vertical-align: middle;
+  accent-color: #0877c9;
+  cursor: pointer;
+}
+
+.add-column-header {
+  padding: 0 !important;
+}
+
+.add-column-button {
+  width: 100%;
+  height: 60px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 10px;
+  border: 0;
+  background: transparent;
+  color: #1268aa;
+  font: inherit;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+
+.add-column-button:hover {
+  background: rgba(18, 104, 170, 0.08);
+}
+
+.sheet-bottom-bar {
+  width: 100%;
+  min-height: 48px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  border-top: 1px solid #e0e2e6;
+  border-radius: 0 0 8px 8px;
+  background: #ffffff;
+}
+
+.sheet-left,
+.sheet-right,
+.sheet-tabs {
+  display: flex;
+  align-items: center;
+}
+
+.sheet-left {
+  min-width: 0;
+  gap: 8px;
+}
+
+.sheet-tabs {
+  align-self: stretch;
+  min-width: 0;
+  overflow-x: auto;
+}
+
+.sheet-tab {
+  position: relative;
+  min-width: 132px;
+  margin-left: 10px;
+  height: 47px;
+  /* padding: 0 16px; */
+  text-align: left;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  color: #5e6673;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.sheet-tab.active {
+  color: #0877c9;
+}
+
+.sheet-tab.active::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: #0877c9;
+  content: "";
+}
+
+.add-sheet-button,
+.pending-jobs-button,
+.sheet-settings-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 5px;
+  background: #f3f4f6;
+  color: #252525;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.add-sheet-button {
+  height: 32px;
+  gap: 4px;
+  padding: 0 10px;
+  font-weight: 700;
+}
+
+.pending-jobs-button{
+  font-size: 14px;
+  font-weight: 600;
+  cursor: default;
+}
+
+.pending-jobs-button:hover{
+  border: 1px solid #0877c9;
+  color: #0877c9;
+}
+
+/*ADD SHEET DROPDOWN*/
+
+.add-sheet-wrapper {
+  position: relative;
+  display: inline-flex;
+}
+
+
+/* Dropdown */
+
+.add-sheet-menu {
+  position: absolute;
+  left: 0;
+  bottom: calc(100% + 7px);
+  width: 190px;
+  padding: 5px 0;
+  background: #ffffff;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+}
+
+
+/* Dropdown options */
+
+.add-sheet-menu button {
+  width: 100%;
+  height: 34px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  border: none;
+  background: transparent;
+  color: #222222;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: left;
+  cursor: pointer;
+}
+
+.add-sheet-button svg:last-child {
+  position: relative;
+  top: -2px;
+}
+
+
+/* Option hover */
+
+.add-sheet-menu button:hover {
+  background: #f5f5f5;
+}
+
+.sheet-right {
+  flex-shrink: 0;
+  gap: 8px;
+}
+
+.pending-jobs-button {
+  height: 32px;
+  padding: 0 12px;
+  white-space: nowrap;
+}
+
+.sheet-settings-button {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  cursor: default;
+}
+
+.sheet-settings-button:hover{
+  border: 1px solid #0877c9;
+  
+}
+
+.add-sheet-button:hover,
+.pending-jobs-button:hover,
+.sheet-settings-button:hover {
+  background: #e7e9ed;
+}
+
+.add-sheet-button:focus-visible,
+.pending-jobs-button:focus-visible,
+.sheet-settings-button:focus-visible,
+.sheet-tab:focus-visible,
+.add-column-button:focus-visible {
+  outline: 2px solid #0877c9;
+  outline-offset: 2px;
+}

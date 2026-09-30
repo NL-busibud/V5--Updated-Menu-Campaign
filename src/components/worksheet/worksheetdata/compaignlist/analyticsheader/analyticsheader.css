@@ -1,0 +1,38 @@
+.analytics-header {
+  width: 100%;
+  padding: 7px 8px 6px;
+  background: #f8f8f8;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  line-height:1.2;
+}
+
+.analytics-header h2 {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  color: #666666;
+  line-height: 14px;
+}
+
+.analytics-header p {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 400;
+  color: #777777;
+  line-height: 13px;
+}
+
+.analytics-breadcrumb{
+  padding: 0px 6px;
+  font-size: 26px;
+  position: relative;
+  top: 2px;
+  color: #0072ce;
+  font-weight:500;
+}
+
+.opened-breadcrumb{
+  color: #0072ce;
+}

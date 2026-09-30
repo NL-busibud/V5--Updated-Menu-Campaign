@@ -1,0 +1,127 @@
+.quick-access {
+    position: absolute;
+    left: 50%;
+    bottom: -30px;
+    transform: translateX(-50%);
+    z-index: 100;
+    width: calc(100% - 80px);
+    height: 108px;
+    padding-left:70px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    box-sizing: border-box;
+    background: #fff;
+    border: 4px solid #fdcbe1;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 -2px 8px rgba(255, 190, 220, 0.25);
+    overflow: hidden;
+}
+
+
+/*TITLE*/
+
+.quick-access-title {
+    flex-shrink: 0;
+    color: #111;
+    font-size: 20px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+
+/*COMMON BUTTON*/
+
+.quick-access-button {
+    height: 38px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+
+/* Icon */
+
+.quick-icon {
+    margin-right: 5px;
+    font-size: 13px;
+    line-height: 1;
+}
+
+
+/*USE CASEs*/
+
+.use-cases {
+    width: 210px;
+    background: #ffd9e4;
+    border: 2px solid #ff9fb8;
+    color: #111;
+}
+
+
+/* SEND COMMUNICATION*/
+
+.send-communication {
+    width: 210px;
+    background: #dceeff;
+    border: 2px solid #66b4ff;
+    color: #111;
+}
+
+
+/*ENRICHMENT*/
+
+.enrichment {
+    width: 210px;
+    background: #d9ffe1;
+    border: 2px solid #54c875;
+    color: #111;
+}
+
+
+/* COLLAPSE BUTTON*/
+
+.quick-collapse {
+    margin-left: auto;
+    width: 120px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    color: #111;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.quick-collapse span {
+    position: relative;
+    top: 2px;
+}
+
+
+/*SPARKLES*/
+
+.quick-sparkle {
+    position: absolute;
+    color: #ffd9ec;
+    font-size: 30px;
+    pointer-events: none;
+}
+
+.sparkle-left {
+    left: 7px;
+    bottom: -8px;
+}
+
+.sparkle-right {
+    right: 4px;
+    bottom: -10px;
+}

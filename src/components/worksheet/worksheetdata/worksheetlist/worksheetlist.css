@@ -1,0 +1,160 @@
+.worksheet-list {
+  width: 100%;
+  height: calc(100vh - 96px);
+  background: #f8f8f8;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
+/*HEADING*/
+
+.worksheet-list-heading {
+  height: 30px;
+  padding: 8px 7px 4px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #666666;
+  background: #f8f8f8;
+}
+
+
+/* WORKSHEET SECTION*/
+
+.worksheet-section {
+  width: 100%;
+  border-bottom: 1px solid #dddddd;
+}
+
+
+/*SECTION HEADER*/
+
+.worksheet-section-header {
+  width: 100%;
+  height: 43px;
+  padding: 0 9px 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  background: #f8f8f8;
+  cursor: pointer;
+}
+
+
+/* Section title */
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #006dcc;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.clock-icon {
+  font-size: 14px;
+  line-height: 1;
+}
+
+
+/* Right side */
+
+.section-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-count {
+  color: #777777;
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.section-arrow {
+  width: 13px;
+  color: #111111;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+
+/*WORKSHEET ITEMS*/
+
+.worksheet-items {
+  position: relative;
+  padding: 0 8px 8px 20px;
+}
+
+
+/* Dotted vertical line */
+
+.worksheet-connection-line {
+  position: absolute;
+  left: 19px;
+  top: 0;
+  bottom: 9px;
+  border-left: 2px dotted #d1d1d1;
+}
+
+
+/* Individual worksheet */
+
+.worksheet-item {
+  position: relative;
+  width: calc(100% - 19px);
+  min-height: 30px;
+  margin-left: 0;
+  padding: 6px 10px 6px 16px;
+  display: block;
+  border: none;
+  border-left: 2px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  color: #555555;
+  font-size: 10px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+
+/* Worksheet item hover */
+
+.worksheet-item:hover {
+  background: #eeeeee;
+}
+
+
+/* Selected worksheet */
+
+.worksheet-item.selected {
+  background: #dedede;
+  border-left-color: #1687d9;
+  color: #333333;
+}
+
+
+/*SCROLLBAR*/
+
+.worksheet-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.worksheet-list::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
+
+.worksheet-list::-webkit-scrollbar-thumb {
+  background: #c9c9c9;
+  border-radius: 5px;
+}
+
+.worksheet-list::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+}

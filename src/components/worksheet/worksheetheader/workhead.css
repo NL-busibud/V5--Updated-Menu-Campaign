@@ -1,0 +1,128 @@
+.worksheet-header {
+  width: 100%;
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 0px;
+  padding: 10px 12px 3px 8px;
+
+  background: #d2d1d1;
+  border-bottom: 1px solid #d6d6d6;
+
+  max-width: 100%;
+  min-width: 0;
+
+  box-sizing: border-box;
+}
+
+
+/*WORKSHEET TITLE*/
+
+.worksheet-title {
+  margin: 0;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  color: #111111;
+}
+
+
+/*HEADER ACTIONS*/
+
+.worksheet-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+
+/*COMMON BUTTON*/
+
+.header-action {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d2d2d2;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #333333;
+  cursor: pointer;
+}
+
+
+/*PLUS BUTTON*/
+
+.add-action {
+  width: 25px;
+  height: 25px;
+  border: none;
+  background: #0877c9;
+  color: #ffffff;
+  cursor: default;
+}
+
+
+/*NORMAL HOVER*/
+
+.header-action:hover {
+  background: #f7f7f7;
+}
+
+.add-action:hover {
+  background: #0870bb;
+}
+
+
+/*TOOLTIP*/
+
+.header-action::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 7px;
+  background: #000000;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 13px;
+  white-space: nowrap;
+  border-radius: 2px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 100;
+}
+
+
+/* Show tooltip on hover */
+
+.header-action:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Search button hover */
+
+.search-action:hover{
+  background: #c5c4c4;
+}
+
+/*FILTER ICON SHRINK*/
+
+.filter-action {
+  transition: transform 0.15s ease;
+}
+
+.filter-action:hover {
+  transform: scale(0.78);
+}
